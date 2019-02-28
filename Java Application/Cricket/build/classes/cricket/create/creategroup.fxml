@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cricket.create.CreategroupController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="leagename" fill="#db8621" strokeType="OUTSIDE" strokeWidth="0.0" text="Leage Name">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <HBox prefHeight="241.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="281.0">
+                     <children>
+                        <Text fill="#178b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="Team List">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <JFXListView fx:id="selectedlist" prefHeight="213.0" prefWidth="270.0" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="301.0" spacing="5.0">
+                     <children>
+                        <Text fill="#178b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="Make Group">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <HBox alignment="CENTER" prefHeight="21.0" prefWidth="186.0">
+                           <children>
+                              <JFXRadioButton fx:id="rand" text="Random" textFill="#3f3f3f">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="manual" text="Manual" textFill="#3f3f3f">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                        </HBox>
+                        <JFXButton onAction="#createGp" style="-fx-background-color: #178b5b;" text="Create" textFill="WHITE" />
+                        <HBox>
+                           <children>
+                              <JFXListView fx:id="groupA" prefHeight="145.0" prefWidth="250.0" />
+                              <JFXListView fx:id="groupB" prefHeight="145.0" prefWidth="250.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="20.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton onAction="#save" style="-fx-background-color: #178b5b;" text="Skip &amp; Save" textFill="WHITE" />
+                  <JFXButton layoutX="294.0" layoutY="10.0" style="-fx-background-color: #178b5b;" text="Go" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

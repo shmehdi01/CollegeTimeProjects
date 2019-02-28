@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+   
+   
+    
+}
+#aclab {
+    -fx-background-color: null;
+}
+#aclab:hover {
+    -fx-background-color: #ccccff;   
+}
+#tab:hover {
+    
+}

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FeeManagement.Module.FeePayment.FeepaymentController">
+   <children>
+      <StackPane fx:id="loadroot" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane fx:id="feepayarea">
+               <center>
+                  <VBox prefHeight="380.0" prefWidth="378.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #006b33;">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee Payment">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="20.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <AnchorPane prefHeight="60.0" prefWidth="472.0" style="-fx-border-color: #e7e7e7;">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="30.0" AnchorPane.leftAnchor="5.0">
+                                 <children>
+                                    <Label text="Class :" textFill="#006b33">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="classlist" onAction="#setSec" prefHeight="25.0" prefWidth="107.0" promptText="Class">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <Label layoutX="127.0" layoutY="14.0" text="Sec :" textFill="#006b33">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="seclist" layoutX="148.0" layoutY="10.0" onAction="#setRoll" prefHeight="25.0" prefWidth="107.0" promptText="Sec">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <Label layoutX="175.0" layoutY="14.0" text="Roll : " textFill="#006b33" />
+                                    <ComboBox fx:id="rolllist" layoutX="205.0" layoutY="10.0" onAction="#setName" prefHeight="25.0" prefWidth="107.0" promptText="Roll" />
+                                    <Label fx:id="stdname" layoutX="202.0" layoutY="14.0" textAlignment="CENTER" textFill="#369ea8">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="5.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Text fill="#686868" layoutX="5.0" layoutY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find Student" y="10.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="20.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </AnchorPane>
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OR " />
+                              <JFXTextField fx:id="search" focusColor="#006b33" labelFloat="true" maxWidth="531.0" minWidth="166.0" onKeyPressed="#doSearch" onKeyReleased="#doSearch" prefHeight="31.0" prefWidth="500.0" promptText="Search Student" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT">
+                           <VBox.margin>
+                              <Insets top="40.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <BorderPane style="-fx-background-color: #006b33;">
+                           <left>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee Amount" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets />
+                                 </BorderPane.margin>
+                              </Text>
+                           </left>
+                           <padding>
+                              <Insets bottom="3.0" left="20.0" right="2.0" top="3.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <right>
+                              <JFXComboBox fx:id="monthlist" prefHeight="25.0" prefWidth="125.0" promptText="Select Month" visibleRowCount="12" BorderPane.alignment="CENTER" />
+                           </right>
+                        </BorderPane>
+                        <HBox alignment="CENTER" prefHeight="54.0" prefWidth="521.0">
+                           <children>
+                              <JFXRadioButton fx:id="bycash" onAction="#hideTF" text="By Cash">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="bychq" layoutX="219.0" layoutY="50.0" onAction="#showChqTf" text="By Cheque">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="byonline" layoutX="271.0" layoutY="50.0" onAction="#showTxnTf" text="Online Payment">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="payingamt" alignment="TOP_LEFT" focusColor="#006b33" labelFloat="true" maxWidth="359.0" minWidth="359.0" onKeyReleased="#showDues" prefHeight="31.0" prefWidth="359.0" promptText="Monthly Fee">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </JFXTextField>
+                              <HBox fx:id="fineBox" alignment="CENTER">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="+">
+                                       <font>
+                                          <Font size="29.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <VBox alignment="CENTER">
+                                       <children>
+                                          <Text fill="#bf1a1a" strokeType="OUTSIDE" strokeWidth="0.0" text="FINE" />
+                                          <TextField fx:id="finetf" onKeyReleased="#showDues" prefHeight="37.0" prefWidth="80.0" style="-fx-border-color: #006B33; -fx-border-width: 2; -fx-border-radius: 5;" text="0">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label fx:id="invalid" textFill="#c31919" />
+                              <Label fx:id="invalidfine" layoutX="24.0" layoutY="10.0" textFill="#c31919" />
+                           </children>
+                           <padding>
+                              <Insets left="14.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="333.0" prefHeight="50.0" prefWidth="521.0">
+                           <children>
+                              <AnchorPane>
+                                 <HBox.margin>
+                                    <Insets left="8.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <JFXTextField fx:id="chqno" alignment="TOP_LEFT" focusColor="#006b33" labelFloat="true" layoutY="7.0" minWidth="271.0" prefHeight="20.0" prefWidth="250.0" promptText="Cheque Number">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="onlinetxn" alignment="TOP_LEFT" focusColor="#006b33" labelFloat="true" layoutY="7.0" minWidth="271.0" prefHeight="20.0" prefWidth="250.0" promptText="Online Txn ID">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <BorderPane>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                           <left>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Grand Total">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="gtotal" layoutX="10.0" layoutY="32.0" text="xxxxx">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label text="Dues" textFill="#dd1919">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <Label fx:id="dues" layoutX="10.0" layoutY="32.0" text="xxx" textFill="#dd1919">
+                                             <font>
+                                                <Font name="System Bold" size="17.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT">
+                                       <children>
+                                          <Label fx:id="returnamt" textFill="#38a14d">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </left>
+                           <right>
+                              <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <JFXButton onAction="#makePayment" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #006b33;" text="Submit Fee" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </right>
+                           <center>
+                              <Label fx:id="payamt" text="Label" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center>
+               <right>
+                  <VBox prefHeight="390.0" prefWidth="300.0" style="-fx-border-color: #e7e7e7; -fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: #006b33;">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Detail">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Icon/default.gif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" style="-fx-border-color: #e7e7e7; -fx-border-style: dashed;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" textAlignment="RIGHT" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="name" layoutX="85.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="202.0" style="-fx-border-color: #e7e7e7; -fx-border-style: dashed;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Father's Name :" textAlignment="RIGHT" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="father" layoutX="85.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="219.0" style="-fx-border-color: #e7e7e7; -fx-border-style: dashed;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registration No :" textAlignment="RIGHT" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="regno" layoutX="85.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="225.0" style="-fx-border-color: #e7e7e7; -fx-border-style: dashed;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No :" textAlignment="RIGHT" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="mob" layoutX="85.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="11.0" layoutY="261.0" style="-fx-border-color: #e7e7e7; -fx-border-style: dashed;">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category :" textAlignment="RIGHT" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="cat" layoutX="85.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX" wrappingWidth="140.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="2.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #006b33;">
+                           <children>
+                              <Text fill="WHITE" onMouseClicked="#test" strokeType="OUTSIDE" strokeWidth="0.0" text="Previous Month Detail">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="fhmn" alignment="CENTER" layoutX="16.0" layoutY="314.0">
+                           <children>
+                              <Text fx:id="label_jan" strokeType="OUTSIDE" strokeWidth="0.0" text="Jan">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_feb" layoutX="151.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feb">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_march" layoutX="160.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="March">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_april" layoutX="133.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="April">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_may" layoutX="151.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="May">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_june" layoutX="169.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="June">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="fhm" alignment="CENTER">
+                           <children>
+                              <Rectangle fx:id="jan" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" onMouseClicked="#getJanMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="feb" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#getFebMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="march" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="15.0" layoutY="10.0" onMouseClicked="#getMarchMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="april" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#getAprilMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="may" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="85.0" layoutY="10.0" onMouseClicked="#getMayMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="june" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="115.0" layoutY="10.0" onMouseClicked="#getJuneMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="shmn" alignment="CENTER" layoutX="11.0" layoutY="309.0">
+                           <children>
+                              <Text fx:id="label_july" strokeType="OUTSIDE" strokeWidth="0.0" text="July">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_aug" layoutX="151.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aug">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_sept" layoutX="160.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sept">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_oct" layoutX="133.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oct">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_nov" layoutX="151.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nov">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="label_dec" layoutX="169.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dec">
+                                 <HBox.margin>
+                                    <Insets right="24.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="shm" alignment="CENTER" layoutX="15.0" layoutY="298.0">
+                           <children>
+                              <Rectangle fx:id="july" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" onMouseClicked="#getJulyMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="aug" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#getAugMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="sept" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="15.0" layoutY="10.0" onMouseClicked="#getSeptMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="oct" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#getOctMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="nov" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="85.0" layoutY="10.0" onMouseClicked="#getNovMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                              <Rectangle fx:id="dec" arcHeight="5.0" arcWidth="5.0" fill="#9ba19c" height="30.0" layoutX="115.0" layoutY="10.0" onMouseClicked="#getDecMonthDetail" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" right="15.0" top="5.0" />
+                                 </HBox.margin>
+                              </Rectangle>
+                           </children>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </right>
+               <left>
+                  <VBox prefHeight="399.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" style="-fx-background-color: #006b33;">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Fee Detail">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="feepane">
+                           <children>
+                              <JFXComboBox fx:id="paytime" onAction="#fetchFeeByTime" prefHeight="25.0" prefWidth="204.0" promptText="Payment Time" />
+                              <HBox>
+                                 <children>
+                                    <JFXListView fx:id="feedetaillistN" layoutX="10.0" layoutY="10.0" prefHeight="250.0" prefWidth="148.0" style="-fx-border-width: 0;" />
+                                    <JFXListView fx:id="feedetaillist" prefHeight="250.0" prefWidth="52.0" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="200.0" style="-fx-border-color: #e7e7e7;">
+                                 <children>
+                                    <Label text="Total Fee">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                    <Label fx:id="totalfee" text="82000">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" style="-fx-border-color: #e7e7e7;">
+                                 <children>
+                                    <Label text="Unpaid Fine" textFill="#38a4b0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="fine" layoutX="10.0" layoutY="10.0" text="5000" textFill="#38a4b0">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXCheckBox fx:id="addfine" onAction="#addFee" text=" " />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </left>
+            </BorderPane>
+         </children>
+      </StackPane>
+      <Pane fx:id="monthpane" layoutX="500.0" layoutY="500.0" prefHeight="200.0" prefWidth="299.0" style="-fx-background-color: #fff;">
+         <children>
+            <Label layoutX="54.0" layoutY="33.0" text="Paid Amount : " textFill="#434343">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="PAID_AMOUNT" layoutX="201.0" layoutY="33.0" text="3000" textFill="#434343">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="63.0" text="Dues : " textFill="#434343">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="DUES_AMOUNT" layoutX="164.0" layoutY="63.0" text="200" textFill="#434343">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="165.0" text="Paid By : " textFill="#434343">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="PAID_BY" layoutX="238.0" layoutY="165.0" text="Cash" textFill="#434343">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="165.0" text="Date : " textFill="#434343">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="PAID_DATE" layoutX="57.0" layoutY="165.0" text="20/12/2017" textFill="#434343">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="addduesbtn" layoutX="94.0" layoutY="100.0" onAction="#addDues" style="-fx-background-color: red;" text="Add Dues For Pay" textFill="WHITE" />
+            <Label layoutX="114.0" layoutY="14.0" text="Month Detail" textFill="#646564" underline="true" />
+            <Label layoutX="14.0" layoutY="14.0" onMouseClicked="#hide" text="close" textFill="#e10e0e" />
+         </children>
+      </Pane>
+      <Label fx:id="monthhead" layoutX="900.0" layoutY="470.0" text="Label">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="hintbox" layoutX="-480.0" prefWidth="480.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+body{
+	background-color: #ff;
+	font-family: Calibri;
+	margin: 0;
+	padding: 0;
+}
+
+body a:link{
+	color:#7ac043;
+}
+
+body a:hover{
+color:#efb112;
+}
+
+
+.main-wrapper{
+	background-color: lightyellow;
+	width: 1200px;
+	margin: auto;
+}
+
+#head-wrapper{
+	/*background-color: skyblue;*/
+	padding-left: 40px;
+	margin-top: 0px;
+	height: 200px;
+	width: auto;
+	line-height: 200px;
+}
+
+.content-wrapper{
+	/*background-color: silver;*/
+	height: auto;
+	width: 1180px;
+	padding: 20px;
+}
+
+#image-block{
+	/*background-color: red;*/
+	height: 350px;
+	width: 600px;
+	margin: 20px;
+	margin-left:0px;	
+}
+
+#login-block{
+	float: right;
+	/*background-color: red;*/
+	height: auto;
+	width: auto;
+	padding: 100px;
+
+}
+
+#login-block form input{
+	height: 30px;
+	width: 250px;
+	padding: 4px;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+
+#login-block button{
+	height: 30px;
+	width: 80px;
+	font-size: 16px;
+	background-color: #7ac043;
+	border: 0px;
+	box-shadow: 0 0px 10px #fdcda7;
+	color: #fff;
+	font-weight: bold;
+}
+
+#login-block button:hover{
+	background-color: #ef3125;
+	color: #c9cacc;
+	transition:all 0.3s ease;
+
+}
+
+
+#foot{
+	background-color: #7ac043;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	width: auto;
+	color: #fff;
+}
+
+
+#reg{
+
+	background-color: #7ac043;
+	float:right;
+	color:#fff;
+	cursor:pointer;
+}

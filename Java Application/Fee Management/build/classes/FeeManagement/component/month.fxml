@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="monthpane" prefHeight="200.0" prefWidth="299.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FeeManagement.component.MonthController">
+   <children>
+      <Label layoutX="54.0" layoutY="33.0" text="Paid Amount : " textFill="#434343">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="PAID_AMOUNT" layoutX="201.0" layoutY="33.0" text="3000" textFill="#434343">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="63.0" text="Dues : " textFill="#434343">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="DUES_AMOUNT" layoutX="164.0" layoutY="63.0" text="200" textFill="#434343">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="165.0" text="Paid By : " textFill="#434343">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="PAID_BY" layoutX="238.0" layoutY="165.0" text="Cash" textFill="#434343">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="165.0" text="Date : " textFill="#434343">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="PAID_DATE" layoutX="57.0" layoutY="165.0" text="20/12/2017" textFill="#434343">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="addduesbtn" layoutX="94.0" layoutY="100.0" style="-fx-background-color: red;" text="Add Dues For Pay" textFill="WHITE" />
+      <Label layoutX="114.0" layoutY="14.0" text="Month Detail" textFill="#646564" underline="true" />
+      <Label layoutX="14.0" layoutY="14.0" onMouseClicked="#close" text="close" textFill="#e10e0e" />
+   </children>
+</Pane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="320.0" style="-fx-border-color: #476a6b; -fx-border-width: 2px; -fx-border-radius: 5px;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Transfer.TransferController">
+   <children>
+      <VBox prefHeight="220.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="40.0" prefHeight="20.0" prefWidth="320.0">
+               <children>
+                  <Label fx:id="close" alignment="CENTER" layoutX="300.0" onMouseClicked="#closeWin" prefHeight="25.0" prefWidth="30.0" text="X" textFill="#686868" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="30.0" prefWidth="320.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="200.0" prefWidth="320.0" text="Transfer Amount" textFill="#476a6b" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="186.0" text="Mobile" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="30.0" prefWidth="220.0">
+                     <children>
+                        <TextField fx:id="mobile" prefHeight="30.0" prefWidth="149.0" promptText="Enter Friend's Mobile" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="90.0" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="30.0" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="186.0" text="Amount (₹)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="30.0" prefWidth="220.0">
+                     <children>
+                        <TextField fx:id="amount" prefHeight="30.0" prefWidth="149.0" promptText="₹ 0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="120.0" prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="30.0" prefWidth="175.0">
+                     <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#closeWin" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #d33838;" text="Cancel" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="175.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#doTransfer" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #3051c9;" text="Send" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="43.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

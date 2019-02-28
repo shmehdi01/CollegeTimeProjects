@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacher.PopController">
+   <children>
+      <Rectangle fx:id="pop" arcHeight="50.0" arcWidth="50.0" fill="DODGERBLUE" height="455.0" layoutX="110.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: rgba(0,0,0,.50); -fx-stroke: rgba(255,255,255,.80); -fx-stroke-width: 2;" width="381.0">
+         </Rectangle>
+      <Label alignment="CENTER" layoutX="186.0" layoutY="242.0" text="Welcome to Popup" textFill="#a81717">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <Circle fill="DODGERBLUE" layoutX="301.0" layoutY="138.0" radius="85.0" stroke="#a4a3a3" strokeLineJoin="BEVEL" strokeType="OUTSIDE" style="-fx-fill: rgba(5,250,250,0.2);">
+         <effect>
+            <Reflection />
+         </effect>
+      </Circle>
+      <Circle fx:id="close" fill="#d72929" layoutX="475.0" layoutY="43.0" onMouseClicked="#close" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="#e4e0e0" layoutX="463.0" layoutY="47.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X" textAlignment="CENTER" wrappingWidth="24.078125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Label fx:id="id" layoutX="308.0" layoutY="313.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="308.0" layoutY="341.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="contact" layoutX="308.0" layoutY="369.0" text="Conctact" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="313.0" text="ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="341.0" text="Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="369.0" text="Conctact" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+AnchorPane {
+    -fx-background-color: #9999ff, linear-gradient(#006666, #99ffff);
+}
+
+#login {
+    -fx-background-color: #009999, linear-gradient(#00cc99, #006666);
+    -fx-border-radius: 5px 0 0 5px;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: #ccffff;
+    -fx-transition:10s;
+}
+#login:hover {
+    -fx-background-color: #009999, linear-gradient(#006666,#00cc99);
+    -fx-border-radius: 0 5px  5px 0;
+    -fx-translate-y: 1;
+    
+    
+}

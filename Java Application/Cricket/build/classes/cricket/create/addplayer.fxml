@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cricket.create.AddplayerController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#db8621" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Player">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="teamlist" onAction="#getTeamName" prefHeight="25.0" prefWidth="191.0" promptText="--Select Team--">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <VBox fx:id="vbtf" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <JFXTextField focusColor="#178b7f" minWidth="365.0" prefHeight="31.0" prefWidth="365.0" promptText="Player 1" />
+               </children>
+               <VBox.margin>
+                  <Insets left="80.0" right="80.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="31.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#178b5b" layoutX="38.0" layoutY="19.0" onMouseClicked="#add" strokeType="OUTSIDE" strokeWidth="0.0" text="(+) Add More" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="469.0" layoutY="-2.0" onAction="#save" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #178b5b;" text="Save" textFill="WHITE" />
+            <Text fx:id="info" fill="#d02a2a" layoutX="238.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

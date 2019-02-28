@@ -1,0 +1,242 @@
+body{
+		font-family: Calibri;
+		margin: 0px;
+		padding: 0px;
+		background-color: lightyellow;
+	}
+
+
+.main{
+	background-color: lightyellow;
+	height: auto;
+	width: 1200px;
+	margin: auto;
+}
+
+#head-bar{
+	position: fixed;
+	z-index: 1;
+	background-color: #7ac043;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	padding: 10px;
+	color:white;
+}
+	.left-side{
+		background-color: lightyellow;
+		left: 0px;
+		top:60px;
+		height: 540px;
+		width: 200px;
+		padding: 50px;
+		border-right:1px inset #ccc;
+		position: fixed;
+	}
+	#pro-pic{
+		text-align: center;
+	}
+	#pro-pic img{
+		height: 200px;
+		width: 200px;
+		border-radius: 200px;
+	}
+
+	#name{
+		height: 30px;
+		width: auto;
+		text-align: center;
+		line-height: 30px;
+		font-size: 24px;
+		color: #7ac043;
+	}
+	#side-nav{
+		height: auto;
+		width: auto;
+		/*text-align: center;*/
+	}
+	#side-nav ul li{
+		list-style: none;
+	}
+	#side-nav ul li a{
+		text-decoration: none;
+		color: #7ac043;
+	}
+	.content-wrapper{
+		background-color: lightyellow;
+		height: auto;
+		width: 710px;
+		padding: 50px;
+		float: left;
+		margin-right: 5px;
+		position: relative;
+		left: 230px;
+		top:60px;
+		
+		/*overflow-y:scroll; */
+	}
+	.post-box{
+		height: auto;
+		width: 415px;
+	}
+	.post-box form textarea{
+		height: 70px;
+		width: 400px;
+		padding: 5px;
+		resize:none;
+		border: 0px;
+		box-shadow: 0 0 10px #ccc;
+	}
+	.post-box button{
+		margin-top: 5px;
+		height: 30px;
+		width: 100px;
+		border: 0px;
+		background-color:#7ac043;
+		color: #fff;
+		font-weight: bold;
+		float: right;
+		cursor: pointer;
+		box-shadow: 0 0 10px #ccc;
+	}
+	.new_feed{
+		margin-top: 100px;
+		border-top: 1px solid #ccc;
+		padding: 0px;
+	}
+	#news_feed_post{
+		background-color:#fff;
+		height: auto;
+		width: auto;
+		margin: 20px;
+		box-shadow: 0 0 10px #ccc;
+	}
+	#post_name{
+		padding: 5px;
+		padding-bottom: 5px;
+		text-transform: capitalize;
+	}
+	#post_name span[id =post_name_style] a {
+		color:#7ac043;
+		font-weight:bold;
+		font-size:18px;
+		text-transform: capitalize;
+		text-decoration: none;
+	}
+	#post_value{
+		border-bottom: 1px solid #ccc;
+		padding: 5px;
+	}
+	#comment{
+		height: 20px;
+		line-height: 20px;
+		padding: 5px;
+		color: gray;
+		font-weight: bold;
+	}
+	#online-wrapper{
+		position: fixed;
+		right: 0px;
+		top:60px;
+		background-color: lightyellow;
+		float: right;
+		height: 540px;
+		width: 200px;
+		border-left: 1px outset #ccc;
+		padding: 10px;
+		text-align: center;
+	}
+	#head-nav{
+		float: right;
+		padding-right: 200px;
+		font-weight: bold;
+	}
+	#head-nav a{
+		color: #fff;
+		text-decoration: none;
+	}
+	#head-nav span{
+		margin-left :5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		display: inline-block;
+	}
+	#head-nav span:hover{
+		background-color: #70b13a;
+	}
+	#search-box{
+		margin-left:80px;
+		height: 25px;
+		width: 400px;
+		border: 0px;
+		padding: 5px;
+	}
+	#btn{
+		height: 35px;
+		width: 70px;
+		border: 0px;
+		background-color: #fff;
+		color:#7ac043;
+		font-weight: bold;
+		cursor: pointer;
+
+	}
+	#cover-area{
+		height: auto;
+		width: auto;
+		background-color: #fff;
+		padding-bottom: 60px;
+		box-shadow: 0 0 10px #ccc;
+	}
+	.cover{
+		height: 300px;
+		width: 1062px;
+		background-color: skyblue;
+		position: absolute;
+	}
+	.cover img{
+		width: 1062px;
+		height: 300px;
+		position: absolute;
+	}
+	.profile-pic_area{
+		height: auto;
+		width: 500px;
+		margin-left: 50px;
+		position: absolute;
+		top:200px;
+	}
+	#profile-pic img{
+		float: left;
+		padding: 2px;
+		height: 150px;
+		width: 150px;
+		box-shadow: 0 0 10px #ccc;
+	}
+	#name-area{
+		font-size:45px;
+		font-weight: bold;	
+		color: #fff;
+		float:left;
+		padding-top: 30px;
+		padding-left: 30px;
+		position: relative;
+		text-transform: capitalize;
+	}
+	#nav-link{
+		float: left;
+		padding-top: 30px;
+		padding-left: 30px;
+		position: relative;
+		font-weight: bold;
+		font-size: 20px;
+		color: #7ac043;
+	}
+	#nav-link span {
+		padding: 10px;
+		cursor: pointer;
+		border-right: 1px solid #ccc;
+	}
+	#nav-link span:hover {
+		background-color:#efefef;
+	}

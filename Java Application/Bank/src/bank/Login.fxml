@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="body" fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bank.LoginController">
+   <children>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="56.0" layoutX="10.0" layoutY="22.0" opacity="0.4" stroke="#4a7cb0" strokeWidth="0.0" width="581.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#1e94c6" />
+                  <Stop color="#77e0d8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle height="322.0" layoutX="362.0" layoutY="78.0" opacity="0.13" stroke="#4a7cb0" strokeWidth="0.0" width="205.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.319047619047619" startY="0.47619047619047616">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="#3eede0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TextField fx:id="user" layoutX="373.0" layoutY="232.0" prefHeight="25.0" prefWidth="192.0" promptText="Enter Username" />
+      <PasswordField fx:id="pass" layoutX="375.0" layoutY="272.0" prefHeight="25.0" prefWidth="192.0" promptText="Enter Password" />
+      <Button id="login" layoutX="510.0" layoutY="302.0" mnemonicParsing="false" onAction="#Clicked" text="Log In" />
+      <Label fx:id="l" layoutX="87.0" layoutY="24.0" text="Welcome to Digital Banking" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <Bloom />
+         </effect>
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <ImageView fitHeight="122.0" fitWidth="112.0" layoutX="424.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/secure.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

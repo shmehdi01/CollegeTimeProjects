@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.CheckListView?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="300.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cricket.create.Initplayer">
+   <children>
+      <Text fx:id="heading" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Opener Batsman">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <CheckListView fx:id="batsmanlist" />
+      <JFXButton onAction="#getTwoPlayers" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #178b5b;" text="Next" textFill="WHITE" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" top="10.0" />
+   </padding>
+</VBox>

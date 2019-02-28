@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cricket.main.MainController">
+   <children>
+      <BorderPane fx:id="border_root" layoutX="143.0" layoutY="94.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d6d1d1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar stylesheets="@../create/addteam.css" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu fx:id="file" mnemonicParsing="false" styleClass="item" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#dashboard" text="Dashboard" />
+                        <MenuItem mnemonicParsing="false" onAction="#startQuick" text="Quick Match" />
+                    <MenuItem mnemonicParsing="false" onAction="#createLeage" text="Create Leage" />
+                        <MenuItem mnemonicParsing="false" text="Start Leage" />
+                        <MenuItem mnemonicParsing="false" onAction="#addTeam" text="Add Team" />
+                        <MenuItem mnemonicParsing="false" onAction="#addPlayer" text="Add Player" />
+                  </items>
+                </Menu>
+                <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu fx:id="help" mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#db8621" lineSpacing="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Cricket Score Calc">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Text>
+                  <HBox alignment="CENTER" prefHeight="186.0" prefWidth="600.0" spacing="20.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" layoutX="128.0" layoutY="10.0" prefHeight="120.0" prefWidth="120.0" text="Quick Match" textFill="#3f80ae">
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icon/quick.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="120.0" prefWidth="120.0" text="Start Leage" textFill="#178b5b">
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icon/test.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" layoutX="227.0" layoutY="103.0" prefHeight="120.0" prefWidth="120.0" text="View Record" textFill="#178b7f">
+                           <graphic>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icon/test2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

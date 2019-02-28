@@ -1,0 +1,10 @@
+.userPostArea{
+	padding: 20px;
+	height: auto;
+	width: 950px;
+	background-color: #fff;
+	box-shadow: 0 0 5px #ccc;
+	position: relative;
+	top: 350px;
+	left: 100px;
+}

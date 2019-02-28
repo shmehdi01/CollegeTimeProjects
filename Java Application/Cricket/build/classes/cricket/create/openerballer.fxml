@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cricket.create.OpenerballerController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" spacing="20.0">
+         <children>
+            <JFXComboBox fx:id="bowlerlist" prefHeight="25.0" prefWidth="184.0" promptText="-- Select Bowler--" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <JFXButton onAction="#getPlayer" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #178b5b;" text="Save" textFill="WHITE" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin></JFXButton>
+   </bottom>
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Bowler" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+</BorderPane>

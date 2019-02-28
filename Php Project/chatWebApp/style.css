@@ -1,0 +1,94 @@
+body{
+	background:white;
+}
+#main{
+	background-color:#ccc;
+	height:auto;
+	width:30%;
+	margin:auto;
+	border:1px solid gray;
+	border-radius: 0 0 10px 10px;
+	
+}
+
+#head{
+	background:skyblue;
+	padding:5px;
+	color:white;
+	font-size:36px;
+	font-weight:bold;
+	font-family:Calibri;
+	text-align:center;
+	border-bottom:2px inset #666;
+}
+
+#chatbox{
+	overflow-y:scroll;
+	height:400px;
+	width:auto;
+	margin:auto;
+	background:#d6d6d6;
+		/*background:url(https://pbs.twimg.com/media/BiD2mx-CEAAp94S.jpg);*/
+}
+
+#chat{
+	background:#f2f2f2;
+	border:1px solid #d6d6d6;
+	padding:5px;
+	padding-left:20px;
+	font-size:18px;
+	text-align:left;
+	font-family:Calibri;
+}
+
+#chat #name{
+	color:red;
+}
+
+#chat #msg{
+	color:;
+}
+
+#chat #time{
+	color:gray;
+	float:right;
+	font-size:12px;
+	line-height:25px;
+}
+
+#formbox{
+	height:auto;
+	width:auto;
+	padding:10px;
+}
+
+#formbox input[type=text]{
+	padding:2px;
+	width:100%;
+	height:30px;
+	border: 0px;
+	margin-bottom:2px;
+	
+}
+
+#formbox input[type=submit]{
+	
+	height:30px;
+	width:100%;
+	background:#0da464;
+	border:1px solid #0a814e;
+	border-radius:7px;
+	font-size:18px;
+	color:#fff;
+}
+
+#formbox  input[type=submit]:hover{
+	background:#075f39;
+	border:1px solid #0a814e;
+}
+
+#formbox textarea{
+	width:100%;
+	height:30px;
+	border: 0px;
+}
