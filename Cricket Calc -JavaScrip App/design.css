@@ -1,0 +1,393 @@
+#hd
+{ width:298px; height:30px; font-size:12px; background:#990000; color:#ccc; line-height:30px;}
+#area
+{
+ color: #336666;
+ text-transform:uppercase;
+ font-family:Arial, Helvetica, sans-serif;
+  }
+#back
+{
+ background:#FFFFCC;
+ height:440px;
+ width:500px;
+ border:1px outset #666666;
+ float:left;
+ }
+#runarea
+{
+ width:450px;
+ height:50px;
+ line-height:45px;
+ background: #FFCC99;
+ color:red;
+ border-bottom:2px dashed #FF9999;
+ padding-left:50px;
+ font-size:24px;
+ font-family:agency fb;
+ }
+#side
+{
+ width:150px;
+ height:380px;
+ background:#FFCCCC;
+ padding-left:18px; 
+ padding-top:8px;
+ border-right:2px dotted #FF9966;
+ }
+#overarea
+{
+ width:287px;
+ height:48px;
+ background:#EAFAB8;
+ float:right;
+ padding:20px;
+ border:1px outset #FFCCCC;
+ float:right;
+ }
+#extra
+{
+ width:287px;
+ height:20px;
+ background:#EAFAB8;
+ float:right;
+ padding:20px;
+ font-size:10px;
+ font-weight:bold;
+ border:1px outset #FFCCCC;
+ text-align:center;
+ }
+	#text
+{
+ margin-top:15px;
+ width:297px;
+ height:70px;
+ background:#FFFFCC;
+ float:right;
+ font-size:15px;
+ font-weight:bold;
+ border:1px outset #FFCCCC;
+ text-align:center;
+ line-height:40px;
+ color:#000033;
+ }
+input[id = total]
+{
+ background:#ccc;
+ width:100px;
+ height:40px;
+ color: blue;
+ font-size:24px;
+ border:2px inset #993366;
+ padding:10px;
+ }
+input[id = wkt]
+{
+ background:#ccc;
+ width:40px;
+ height:40px;
+ color: red;
+ font-size:24px;
+ border:2px inset #993366;
+ padding:10px;
+ }
+input[id=ball]
+{
+ background: #CCFFFF;
+ width:40px;
+ height:20px;
+ color: #006699;
+ font-size:10px;
+ border:1px inset #CCCC99;
+ padding:5px;
+ font-weight:bold;
+ }
+input[id=rr]
+{
+ background: #CCFFFF;
+ width:40px;
+ height:20px;
+ color: #006699;
+ font-size:10px;
+ border:1px inset #CCCC99;
+ padding:5px;
+ font-weight:bold;
+ }
+ input[id=ovr]
+{
+ background: #CCFFFF;
+ width:100px;
+ height:40px;
+ color: #006699;
+ font-size:18px;
+ border:1px inset #CCCC99;
+ padding:10px;
+ font-weight:bold;
+ text-align:center;
+ }
+ input[id=lb]
+{
+ background: #CCFFFF;
+ width:30px;
+ height:20px;
+ color: #006699;
+ font-size:10px;
+ border:1px inset #CCCC99;
+ padding:10px;
+ font-weight:bold;
+ text-align:left;
+ margin-right:10px;
+ }
+  input[id=fh]
+{
+ background: #CCFFFF;
+ width:30px;
+ height:20px;
+ color: #006699;
+ font-size:10px;
+ border:1px inset #CCCC99;
+ padding:10px;
+ font-weight:bold;
+ text-align:left;
+ }
+input
+{
+ background: #CCFFFF;
+ width:50px;
+ height:40px;
+ color: #006699;
+ font-size:14px;
+ border:1px inset #CCCC99;
+ padding:10px;
+ font-weight:bold;
+ text-align:center;
+ }
+button
+{
+ width:80px;
+ height:35px;
+ background:#9966FF;
+ border-radius:5px;
+ font-size:14px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color:#CCCCCC;
+ }
+button[id=out]
+{
+ width:140px;
+ height:30px;
+ background:#CC0000;
+ border:2px dotted red;
+ border-radius:5px ;
+ font-size:14px;
+ text-transform:uppercase;
+ font-weight:bold;
+  }
+button[id=nbl]
+{
+ width:80px;
+ height:35px;
+ background:#339999;
+ border-radius:5px;
+ font-size:14px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color:#CCCCCC;
+ }
+button[id=wdb]
+{
+ width:80px;
+ height:35px;
+ background:#3366CC;
+ border-radius:5px;
+ font-size:14px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color:#CCCCCC;
+ }
+button[id=dt]
+{
+ width:80px;
+ height:35px;
+ background:black;
+ border-radius:5px;
+ font-size:14px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color:#CCCCCC;
+ }
+button[id= ext]
+{
+ width:30px;
+ height:20px;
+ background:#006633;
+ font-size:8px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color: #CCCC33;
+ border:0px;
+ border-radius:0px;
+ }
+ button[id= extrn]
+{
+ width:30px;
+ height:30px;
+ background:#663399;
+ font-size:12px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color: #CCCC33;
+ border:0px;
+ border-radius:0px;
+ }
+button[id= btnext]
+{
+ width:60px;
+ height:20px;
+ background:	#0033FF;
+ font-size:9px;
+ text-transform:uppercase;
+ font-weight:bold;
+ color: #CCCC33;
+ border:0px;
+ border-radius:0px 5px;
+ }
+button[id= ext]:hover { background:#6666CC; }
+button:hover { background: #3399CC; cursor: pointer;}
+ 
+#second
+{
+width:300px;
+height:440px;
+background:#FFFFCC;
+border:1px solid black;
+float:left;
+}
+#head2
+{
+ width:300px;
+ height:50px;
+ line-height:50px;
+ background: #FFCC99;
+ color: #339999;
+ border-bottom:2px dashed #FF9999;
+ font-size:24px;
+ font-family:agency fb;
+ text-align:center;
+ }
+#trgt
+{
+ width:227px;
+ height:60px;
+ background:#EAFAB8;
+ float:right;
+ font-size:15px;
+ font-weight:bold;
+ border:1px outset #FFCCCC;
+ text-align:center;
+ line-height:60px;
+ color: #CC6600;
+ }
+ #col
+ {
+  width:298px;
+  height:50px;
+  background: #FFFFCC;
+  border:1px solid #FFCCCC;
+  float:left;
+  text-align:center;
+  line-height:50px;
+  color: #6666CC;
+  }
+   #col2
+ {
+  width:298px;
+  height:30px;
+  background: #FFFFCC;
+  border:1px solid #FFCCCC;
+  float:left;
+  text-align:center;
+  line-height:30px;
+  color: #3399CC;
+  font-size:10px;
+  font-weight:bold;
+  }
+ #text2
+{
+ margin-top:15px;
+ width:258px;
+ height:30px;
+ background:#FFFFCC;
+ float:left;
+ padding:20px;
+ font-size:10px;
+ font-weight:bold;
+ border:1px outset #FFCCCC;
+ text-align:center;
+ }
+   #col3
+ {
+  width:327px;
+  height:30px;
+  background: #FFFFCC;
+  border:1px solid #FFCCCC;
+  float:right;
+  text-align:center;
+  line-height:30px;
+  color: #333333;
+  font-size:10px;
+  font-weight:bold;
+  margin-top:7px;
+  }
+ select
+{
+width:100px;
+background:	#EEEEEE;
+border:1px solid #FFCCCC;
+border-radius:5px;
+color:#666666;
+}
+select:hover 
+	{ 
+	color:#333333;
+	background:	#CCCCCC;
+}
+#note
+{
+width:802px;
+height:30px;
+background:	#FFFFCC;
+border:1px outset #FF99CC;
+line-height:30px;
+text-align:center;
+color: #660066;
+}
+#box
+{
+width:327px;
+  height:60px;
+  background: #FFFFCC;
+  border:1px solid #FFCCCC;
+  float:right;
+  text-align:center;
+  line-height:30px;
+  color: #333333;
+  font-size:10px;
+  font-weight:bold;
+  margin-top:7px;
+}
+#box2
+{
+width:327px;
+  height:40px;
+  background: #FFFFCC;
+  border:1px solid #FFCCCC;
+  float:right;
+  text-align:center;
+  line-height:30px;
+  color: #333333;
+  font-size:10px;
+  font-weight:bold;
+  margin-top:5px;
+}

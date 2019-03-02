@@ -1,0 +1,97 @@
+
+<div id="area" onMouseOver="total(), i2()" > 
+<div id="note">  <class id="inning"> </class> </div>
+<head>
+<script src="script.js" type="text/javascript"></script>
+<link href="design.css" rel="stylesheet" type="text/css" />
+</head>
+
+<div id="back">
+
+<div id="runarea">
+total run 
+ <input type="text" id="total" onKeyUp="total"  size="3"/>
+ <font size="6"> / </font> <input type="text" id="wkt" onKeyUp="total" value="0" size="1" />
+</div>
+
+<div id="overarea">
+over <input type="text" id="ovr" size="1" /> 
+</div>
+
+
+<div id="extra">
+ run rate <input type="text" id="rr" onKeyUp="total" readonly= /> 
+ total balls  <input type="text" id="ball"  size="1" />
+</div> 
+
+<div id="col3"> 
+SELECT OVER  	<select id="sover"	>
+<option  value="5"> 5 overs </option>
+<option  value="7"> 7 overs </option>
+<option  value="8"> 8 overs </option>
+<option  value="10"> 10 overs </option>
+<option  value="12"> 12 overs </option>
+<option  value="15"> 15 overs </option>
+<option  value="20"> 20 overs </option>
+</select>
+</div>
+<div id="col3">
+<input id="lb" readonly="readonly" />
+<button id="btnext" > Leg By </button> 
+<button type="button" onclick="extra(), ext1(), legby()" id="ext" value="1" > +1 </button> <input id="extbx1"  value="0" hidden/> 
+<button type="button" onclick="extra(), ext2(), legby()" id="ext"> +2 </button> <input id="extbx2"  value="0" hidden/>
+<button type="button" onclick="extra(), ext3(), legby()" id="ext"> +3 </button> <input id="extbx3"  value="0" hidden/>
+<button type="button" onclick="extra(), ext4(), legby()" id="ext"> +4 </button> <input id="extbx4"  value="0" hidden/>
+</div>
+<div id="col3">
+Run on wide or no ball : 
+<button type="button" onclick=" extr1()" id="extrn"> +4 </button> <input id="extbx5"  value="0" hidden/>
+<button type="button" onclick="extr2()" id="extrn"> +6 </button> <input id="extbx6"  value="0" hidden/> 
+</div>
+<div id="box">
+</div>
+<div id="box2">
+<button id="btnext" onclick="freehit()"> Free Hit </button> <input id="fh" /> 
+<font color="#FFFFCC">|----------------------|</font>
+Total extra <input id="excount" readonly="readonly" />
+</div>
+
+
+<div id="side">
+<input type="text" id="dot" value="0" size="1" />  <button type="button" onClick="dotb()" id="dt"> dot </button>
+<input type="text" id="one" onKeyUp="cric();" value="0" size="1" />  <button type="button" onClick="single()"> single </button>
+<input type="text" id="two" onKeyUp="cric();" value="0" size="1" />  <button type="button" onClick="double()"> double </button>
+<input id="triple" value="0" /> <button onclick="triple()"> triple </button>
+<input type="text" id="four" value="0" size="1" />  <button type="button" onClick="four()"> four </button>
+<input type="text" id="six" value="0" size="1" />  <button type="button" onClick="six()"> six </button>
+<input type="text" id="wide" onKeyUp="cric();" value="0" size="1" />  <button type="button" onClick="extra(),wide()" id="wdb"> wide </button>
+<input type="text" id="noball" onKeyUp="cric();" value="0" size="1" />  <button type="button" onClick="extra(),noball()" id="nbl"> no ball </button>
+<p><button type="button" onClick="catchs()" id="out"> out !! </button>
+</div>
+</div><!--back-->
+
+<div id="second">
+<div id="head2"> 2nd Inning   </div>
+<div id="trgt"> TARGET RUN <input type="text" id="target" onkeyup="i2()"  /> </div>
+<div id="col"> Need <b><class id="p1"> </class> Runs</b> in <b><class id="p3"> </class> ball</b> </div>
+<div id="col2"> Req. RR : <class id="p4"> </class> || Remain Over : <class id="p2"> </class></div>
+<div id="text2">
+
+THIS IS THE SIMPLE SCOREBOAD CALCULATOR.
+<p>
+    DJ COLLEGE OF ENGG. & TECH
+</div>
+<div id="text">
+<div id="hd"> MATCH RESULT </div>
+<class id="p5"> </class>
+</div> 
+
+
+ </div> <!----second---->
+
+ 
+</div><!--area--->
+
+
+
+
